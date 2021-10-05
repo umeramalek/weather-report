@@ -32,6 +32,13 @@ THEN I am again presented with current and future conditions for that city
 
 ### Images
 
+![](asset/weather-gif.gif)
+![](asset/photo1.png)
+![](asset/photo2.png)
+![](asset/photo3.png)
+![](asset/photo4.png)
+![](asset/photo5.png)
+
 
 
 ## Built With
