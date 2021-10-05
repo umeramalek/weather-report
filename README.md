@@ -42,7 +42,8 @@ THEN I am again presented with current and future conditions for that city
 
 ## Deployed Link
 
-* [See Live Site](#)
+* [See Live Site](#)https://github.com/umeramalek/weather-report
+https://umeramalek.github.io/weather-report/
 
 
 
