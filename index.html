@@ -1,85 +1,80 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"/>
-  <link rel="stylesheet" href="./style.css">
-<title>Weather Dashboard</title>
-
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/d3bce829f3.js"></script>
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
-<body>
-    <header class="container-fluid text-center p-2">
-        <h1>Weather Dashboard</h1>
-    </header>
 
-<div class="container-fluid">
-    <div class="row">
-        <div class="card col-sm-4 float-left bg-light">
-            <h4 class="card-header text-uppercase">Search By City</h4>
-                <div class="input-group card-body">
-                    <input id="search-input me-2" class="form-control" type="search" placeholder="Search for a city" aria-label="Search">
-                    <div>
-                        <button type="submit" id="searchBtn" class="btn"><i class="fa fa-search"></i></button>
+<body>
+
+    <div class="container-fluid">
+        <div class="card text-center p-2">
+            <div class="card-body text-center bg-dark text-white">
+                <h1>Weather Dashboard</h1>
+            </div>
+        </div>
+
+        
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card-body text-center">
+
+                        <div class="card" style="width: 18rem;">
+                            <div class="card-body bg-light">
+                                <h6 class="card-subtitle mb-2 text-muted">Search Weather by City</h6>
+                                <div class="input-group mb-3">
+                                    <input type="text" class="form-control searchInput" placeholder="Enter City Name"
+                                        aria-label="Recipient's username"">
+                                    <div>
+                                        <button class="btn btn-outline-secondary bg-primary searchButton" type="button"><i class="fas fa-search"></i></button>
+                                    </div>
+                                </div>
+
+                                <ul type= "button" class="list-group">
+
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                 </div>
-        </div>
-
-
-    <div class="col-sm-8 float-right">
-        <div class="row ml-2 border border-dark rounded today-weather">
-            <div class="card-body" class="col-sm-12">
-                <h3 id="city-name" class="city-name align-middle"></h3>
-                <img id="current-pic" alt="">
-                <p id="temperature" class="current-weather">Temperature: </p>
-                <p id="humidity" class="current-weather">Humidity: </p>
-                <p id="wind-speed" class="current-weather">Wind Speed: </p>
-                <p id="uv-index" class="current-weather">UV-index: </p>
-            </div>
-        </div>
-       
-        <div class="col-sm-12 border border-dark rounded mt-3" id ="future-weather">
-            <h3>5-Day Forecast:</h3>
-            <div class="row text-light">
-                    <div class="col-md-2 forecast bg-dark text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-dark text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-dark text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-dark text-white m-2 rounded"></div>
-                    <div class="col-md-2 forecast bg-dark text-white m-2 rounded"></div>
-            </div>
-        </div>
-    </div>
     
-    <div>
-        <button class=" btn btn-primary" type="button" id="clearBtn">Clear</button>
-        <ul class="list-group"></ul>
-    </div>
-    
+            <div class="col mt-4 mr-5">
+                <div class="card currentCard pb-2 pt-1">
+                    <h5 class="card-title mt-2 text-center">Current Weather</h5>
+                 </div>
+            </div>
 
-</div>
+            <div class="row">
+                 <div class="col mt-4">
+                    <div class="card  fiveDayCard ">
+                        <h5 class="card-title mt-2 mr-5">5-Day Forecast </h5>
+                        <div class="row">
+                            <div class="col fiveDayForecast"></div>
+                        
+                        </div>
+                    </div>
+                 </div>
+            </div>
+         </div>
+     </div>
 </div>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="script.js"></script>
+
 </body>
+
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -92,12 +87,18 @@
 
 <!-- GIVEN a weather dashboard with form inputs
 WHEN I search for a city
+    input box and search button
 THEN I am presented with current and future conditions for that city and that city is added to the search history
+    usisng api search for current and future predictions
 WHEN I view current weather conditions for that city
 THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
+    add within js by appending html tags
 WHEN I view the UV index
+     UV index by long and latitude
 THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
 WHEN I view future weather conditions for that city
 THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
+    get icons from the weather icon api
 WHEN I click on a city in the search history
+    a list of search history
 THEN I am again presented with current and future conditions for that city -->

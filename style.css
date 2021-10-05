@@ -1,50 +1,38 @@
-header {
-    background-color: cornflowerblue;
-    color:black;
+
+ul {
+    list-style: none;
+
 }
 
-.container-fluid {
-    margin-bottom: 10px;
+li {
+    border-bottom: 1px solid lightgray;
+    text-align: left;
+    padding-left: 10px;
 }
 
-.card {
-    margin: 0 0 20px 0;
-    border: 3px solid var(--dark);
-    border-radius: var(--border-radius);
-    padding-top: 20px;
-
-  }
-  
-.card-header {
-    color: var(--primary);
-    padding: 2.5%;
-    border-radius: calc(.18rem - 1px) calc(.18rem - 1px) 0 0;
-  }
-  
-
-#clear-history {
-    margin-bottom: 20px;
-   margin-left: 20px;
+.card-title {
+    font-size: 20px;
 }
 
-.btn {
-    background-color: blue;
-    color:white;
+
+img {
+    width: 100px;
+    height: 100px;
 }
-  
-.btn:hover {
+
+.fiveDayColor {
+    padding: 20px;
+    background-color: #1E90FF;
+    color: white;
+    float: left;
+    margin: 10px;
+    border: 1px solid lightgray;
+
+}
+
+button:hover {
     color: var(--primary);
     background-color: var(--tertiary);
     transform: translate(0, 0);
     box-shadow: 2px 2px var(--dark);
-  }
-
-.col-lg-9 {
-    border: 3px solid var(--dark);
-}
-
-
-.fiveday-box {
-    border: 3px solid var(--dark);
-    margin-top: 20px;
 }
